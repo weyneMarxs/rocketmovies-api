@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node --watch ./src/server.js",
+    "start": "pm2-runtime start ecosystem.config.js --env production",
+    "dev": "node --watch ./src/server.js",
     "migrate": "knex migrate:latest"
   },
   "keywords": [],
@@ -19,6 +20,7 @@
     "jsonwebtoken": "^9.0.2",
     "knex": "^3.1.0",
     "multer": "^1.4.5-lts.1",
+    "pm2": "^5.4.1",
     "sqlite": "^5.1.1",
     "sqlite3": "^5.1.7"
   }
